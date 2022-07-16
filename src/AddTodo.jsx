@@ -1,12 +1,12 @@
 import React,{useState} from "react";
 import "./style.css";
 
-export default function AddTodo() {
+export default function AddTodo(props) {
   const [todo, setTodo] = useState('');
 
   const handleForm = (e) =>{
     e.preventDefault();
-    console.log(todo);
+    props.getTodo(todo);
   }
   
   const handleInput = (e) =>{
